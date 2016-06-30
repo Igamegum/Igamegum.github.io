@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B01.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B02.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B03.png">
-<meta property="og:updated_time" content="2016-06-30T09:00:15.665Z">
+<meta property="og:updated_time" content="2016-06-30T09:01:48.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WIN 下Gvim 配置 G++ 编译器">
 <meta name="twitter:description" content="从大三开始就入坑VIM了，作为一名没有任何觉悟的菜鸟，一直都是在Windows下进行开发，所以一直以来用的都是Gvim。G++的配置很早之前就已经实现了，因为感觉最近电脑的硬盘有随时”爆炸”的可能，特意markdown一下自己的配置，起个备忘的作用.">
@@ -202,13 +202,21 @@
 <p>对于_vimrc的配置语法，可以 <a href="http://blog.chinaunix.net/uid-26707720-id-3329205.html" target="_blank" rel="external">戳这</a>,个人感觉跟shell脚本差不多，毕竟Gvim是从Linux下的Vim而来的。</p>
 <p>先不废话，对于G++的配置，我的代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"定义CompileRun函数，用来编译代码 </span><br><span class="line">func CompileRun()  </span><br><span class="line">exec "</span>w<span class="string">"  </span><br><span class="line">  </span><br><span class="line">if &amp;filetype == 'c'  </span><br><span class="line">exec "</span>!gcc % -g -o %&lt;.exe<span class="string">"  </span><br><span class="line">  </span><br><span class="line">elseif &amp;filetype == 'cpp'  </span><br><span class="line">exec "</span>!g++ % -g -o %&lt;.exe<span class="string">"  </span><br><span class="line">endif  </span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line">"</span>定义Run函数  </span><br><span class="line">func Run()  </span><br><span class="line"><span class="keyword">if</span> &amp;filetype == <span class="string">'c'</span> || &amp;filetype == <span class="string">'cpp'</span>  </span><br><span class="line"><span class="built_in">exec</span> <span class="string">"!%&lt;.exe"</span>  </span><br><span class="line">endif  </span><br><span class="line">endfunc  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">map &lt;F9&gt; :call CompileRun()&lt;CR&gt;  </span><br><span class="line">map &lt;F10&gt; :call Run()&lt;CR&gt;</span><br></pre></td></tr></table></figure></p>
 <p>代码还是很好理解的</p>
-<p>&lt;exec “w”</p>
+<blockquote>
+<p>exec “w”</p>
+</blockquote>
 <p>这句起的是保存的作用,相当于在Normal 模式下输入:w</p>
-<p>&lt;exec “!%&lt;.exe”</p>
+<blockquote>
+<p>exec “!%&lt;.exe”</p>
+</blockquote>
 <p>这句话是执行跟文件同名的.exe文件(WIN下编译出来的.exe文件跟原文件同名),效果相当于在命令行执行该.exe文件</p>
-<p>&lt;exec “!g++ % -g -o %&lt;.exe”  </p>
+<blockquote>
+<p>exec “!g++ % -g -o %&lt;.exe”  </p>
+</blockquote>
 <p>这句话理解起来跟上面是一样的，相当于在命令行下用g++编译文件，至于 -g -o 是编译选项,熟悉g++编译的一定知道。</p>
-<p>&lt;”map &lt;F9&gt; :call CompileRun() &lt;CR&gt;”</p>
+<blockquote>
+<p>map &lt;F9&gt; :call CompileRun() &lt;CR&gt;</p>
+</blockquote>
 <p>这里只是作一个Normal模式下,执行相应函数的快捷键配置，不多说了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>将相应的编译器配置到环境变量中</li>
