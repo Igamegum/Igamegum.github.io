@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>WIN下Gvim管理插件 | iGamegum&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vim的插件手动安装时比较繁琐的，这里介绍一个专门管理Vim插件的插件Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
+  <meta name="description" content="Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WIN下Gvim管理插件">
 <meta property="og:url" content="http://yoursite.com/2016/07/12/Gvim_vumdle/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
-<meta property="og:description" content="Vim的插件手动安装时比较繁琐的，这里介绍一个专门管理Vim插件的插件Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
+<meta property="og:description" content="Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_04.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_06.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_05.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_02.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_10.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_01.png">
-<meta property="og:updated_time" content="2016-07-12T15:08:31.714Z">
+<meta property="og:updated_time" content="2016-07-12T15:37:57.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WIN下Gvim管理插件">
-<meta name="twitter:description" content="Vim的插件手动安装时比较繁琐的，这里介绍一个专门管理Vim插件的插件Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
+<meta name="twitter:description" content="Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
 <meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_04.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
@@ -71,7 +71,7 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>菜单</li>
+						<li>Menu</li>
 						<li>Tags</li>
 						
 						
@@ -195,9 +195,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Vim的插件手动安装时比较繁琐的，这里介绍一个专门管理Vim插件的插件<strong>Vundle</strong>。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！</p>
+        <p>Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——<strong>Vundle</strong>。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！</p>
 <a id="more"></a>
-<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><p>如果Win上已经装好了Git的可以直接跳过这一步<br><br>这里是<a href="https://git-scm.com/downloads" target="_blank" rel="external">官方下载链接</a>，或者可以<a href="https://git-for-windows.github.io/" target="_blank" rel="external">戳这</a>。下载好之后，安装什么的就不需要多说了，直接全点下一步就OK！<br><br><strong>值得一提的是，需要将git.exe所在的文件目录配置到环境变量中</strong><br>以我为例，我这边是 </p>
+<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><p>如果Win上已经装好了Git的可以直接跳过这一步<br>这里是<a href="https://git-scm.com/downloads" target="_blank" rel="external">官方下载链接</a>，或者可以<a href="https://git-for-windows.github.io/" target="_blank" rel="external">戳这</a>。下载好之后，安装什么的就不需要多说了，直接全点下一步就OK！<br><strong>值得一提的是，需要将git.exe所在的文件目录配置到环境变量中</strong><br>以我为例，我这边是 </p>
 <blockquote>
 <p>C:\Program Files (x86)\Git\bin</p>
 </blockquote>
@@ -215,7 +215,7 @@
 <p>以后添加插的代码就直接写在<br><strong>call vundle#begin()</strong> 和 <strong>callvundle#end()</strong> 之间</p>
 <p>重新打开Vim，在Normal模式下输入 <strong>:BundleList</strong>,即可查看当前_vimrc文件中指定的插件<br><br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_02.png" alt=""><br><br>再在Normal模式下输入<strong>:BundleInstall</strong>，后台便会自动下载并安装插件栏里还未安装的插件,当状态栏里显示Done！的时候，表明所有插件都安装完毕。<br>其实到这里为止，你便可以根据自己的需要，自由地安装插件了！</p>
 <p>下面再讲解一下vim-airLine插件的安装</p>
-<p>##安装 vim-airLine<br>airLine简单的说就是vim状态栏的强化版，当然，还添加了很多其他的功能</p>
+<h2 id="安装-vim-airLine"><a href="#安装-vim-airLine" class="headerlink" title="安装 vim-airLine"></a>安装 vim-airLine</h2><p>airLine简单的说就是vim状态栏的强化版，当然，还添加了很多其他的功能</p>
 <p>我们先在_vimrc中vundle的插件配置中添加一句</p>
 <blockquote>
 <p>Bundle ‘bling/vim-airline’</p>
@@ -254,7 +254,7 @@
 <div class="share_jia">
 	<!-- JiaThis Button BEGIN -->
 	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<span class="jiathis_txt">Share to: &nbsp; </span>
 		<a class="jiathis_button_facebook"></a> 
     <a class="jiathis_button_twitter"></a>
     <a class="jiathis_button_plus"></a> 
