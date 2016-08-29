@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/23/Trace_return_type/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
 <meta property="og:description" content="追踪返回类型配合auto 和 decltype 会真正释放C++11中泛型编程的能力！">
-<meta property="og:updated_time" content="2016-08-23T09:39:34.696Z">
+<meta property="og:updated_time" content="2016-08-29T16:39:51.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++11追踪返回类型">
 <meta name="twitter:description" content="追踪返回类型配合auto 和 decltype 会真正释放C++11中泛型编程的能力！">
@@ -97,7 +97,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/G/" style="font-size: 10px;">G++</a> <a href="/tags/VIM/" style="font-size: 20px;">VIM</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
+						<a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/G/" style="font-size: 10px;">G++</a> <a href="/tags/VIM/" style="font-size: 15px;">VIM</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
 					</div>
 				</section>
 				
@@ -192,7 +192,7 @@
 <h2 id="追踪返回类型的引入"><a href="#追踪返回类型的引入" class="headerlink" title="追踪返回类型的引入"></a>追踪返回类型的引入</h2><p>在C++98中,如果一个函数模板的返回类型依赖于实际的入口参数的类型，那么该返回类型在模板实例化之前可能都无法确定,这样的话我们在定义该函数模板的时候就会遇到麻烦。如下代码<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1,<span class="keyword">typename</span> T2&gt;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Sum</span><span class="params">(T1 a,T2 b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> ans = a + b ;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"The type of ans is:"</span>&lt;&lt;<span class="keyword">typeid</span>(ans).name()&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>不管Sum函数中，ans的类型如何，我们都要很憋屈的将结果转成double返回,这里还有可能发生隐式转换的错误，这种情况将大大降低C++泛型编程的能力。<br>如果你想到利用decltype，你可能会将上述代码修改成如下</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1,<span class="keyword">typename</span> T2&gt;</span><br><span class="line"><span class="keyword">decltype</span>(a+b) Sum(T1 a,T2 b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">auto</span> ans = a + b ;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"The type of ans is:"</span>&lt;&lt;<span class="keyword">typeid</span>(ans).name()&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>很遗憾，这段代码会报未定义的错误,因为编译器是从左往右地读入符号的,在推导<strong>decltype(a+b)</strong>的时候，表达式中的a和b都未声明。<br>因此，为了解决这个问题,C++11引入新语法——追踪返回类型。</p>
+<p>很遗憾，这段代码会报未定义的错误,因为编译器是从左往右地读入符号的,在推导<strong>decltype(a+b)</strong>的时候，表达式中的a和b都未声明。<br>因此，为了解决这个问题,C++11引入新语法——追踪返回类型。上述代码可以修改成如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">template&lt;typename T1,typename T2&gt;</span><br><span class="line">auto Sum(T1 a,T2 b) -&gt; decltype(a+b)</span><br><span class="line">&#123;</span><br><span class="line">	auto ans = a + b ;</span><br><span class="line">	std::cout&lt;&lt;<span class="string">"The type of ans is:"</span>&lt;&lt;typeid(ans).name()&lt;&lt;std::endl;</span><br><span class="line">	<span class="built_in">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="使用追踪返回类型的函数"><a href="#使用追踪返回类型的函数" class="headerlink" title="使用追踪返回类型的函数"></a>使用追踪返回类型的函数</h2><p>追踪返回类型的函数和普通函数的声明最大的区别在于返回类型的后置。<br>追踪返回类型除了能够提高泛型编程的能力，在一定情况下还能提高代码的可读性。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>  ( * (*pf()) () ) ()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -213,6 +213,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/08/30/C++11_Move_Forward/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          C++11移动语义与完美转发
+        
+      </div>
+    </a>
   
   
     <a href="/2016/08/13/C++11_Regex/" id="article-nav-older" class="article-nav-link-wrap">
