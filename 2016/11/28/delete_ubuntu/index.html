@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png">
 <meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png">
-<meta property="og:updated_time" content="2016-11-27T17:37:14.624Z">
+<meta property="og:updated_time" content="2016-11-27T17:39:29.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何从WIN7+ubuntu双系统中卸载ubuntu">
 <meta name="twitter:description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
@@ -200,8 +200,8 @@
 <p>(建议在此操作前，先右键.exe，选择以管理员身份运行)<br>以我的为例<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png" alt=""></p>
 <p>按下Enter键后，如果没有报任何消息，MBR就修复完成了</p>
 <p>接下来重启计算机，你就会神奇地发现直接进入WIN系统了。<br>如果到这一步都很顺利，那么接下来只需要删除ubuntu的分区即可，如果你很不幸地发现和上文所描述的情况不一致，请不要继续接下来的步骤，直接咨询你信任得过的大神！</p>
-<h3 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h3><p>在WIN7中删除分区就很简单了。<br>计算机（右键→&gt;管理→&gt;磁盘管理</p>
-<p>点击ubuntu所在的分区(可能2个或者4个，取决于之前的安装方法)，<strong>右键→&gt;删除卷</strong>(千万不要把原本WIN7中的分区给删除了)<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png" alt=""></p>
+<h3 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h3><p>在WIN7中删除分区就很简单了。<br>计算机(右键)→管理→磁盘管理</p>
+<p>点击ubuntu所在的分区(可能2个或者4个，取决于之前的安装方法)，<strong>右键→删除卷</strong>(千万不要把原本WIN7中的分区给删除了)<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png" alt=""></p>
 <p>删除成功后，我们会看到磁盘卷中多出一块绿色的可用空间，这部分的空间是未被系统所使用的<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png" alt=""><br>当然，如果想把这块内存分配器其他盘符，方法也非常简单，请自行搜索。不过在这里，我会把这块空间留下来安装新的ubuntu系统。</p>
 <p>到这里为止，双系统的ubuntu就算卸载完成了。有删必有装，接下来讲解一下怎么安装ubuntu双系统！</p>
 
