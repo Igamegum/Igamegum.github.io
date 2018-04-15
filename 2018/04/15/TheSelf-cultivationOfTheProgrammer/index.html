@@ -4,23 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>如何从WIN7+ubuntu双系统中卸载ubuntu | iGamegum&#39;s Blog</title>
+  <title>笔记-程序员的自我修养(第二章) | iGamegum&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
+  <meta name="description" content="编译过程
+预编译将源代码文件和头文件进行预编译
+gcc -E hello.c -o hello.i预编译主要是处理以#开始的预编译指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何从WIN7+ubuntu双系统中卸载ubuntu">
-<meta property="og:url" content="http://yoursite.com/2017/08/04/delete_ubuntu/index.html">
+<meta property="og:title" content="笔记-程序员的自我修养(第二章)">
+<meta property="og:url" content="http://yoursite.com/2018/04/15/TheSelf-cultivationOfTheProgrammer/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
-<meta property="og:description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png">
-<meta property="og:updated_time" content="2016-11-28T09:32:58.000Z">
+<meta property="og:description" content="编译过程
+预编译将源代码文件和头文件进行预编译
+gcc -E hello.c -o hello.i预编译主要是处理以#开始的预编译指令">
+<meta property="og:updated_time" content="2018-04-15T14:11:49.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何从WIN7+ubuntu双系统中卸载ubuntu">
-<meta name="twitter:description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg">
+<meta name="twitter:title" content="笔记-程序员的自我修养(第二章)">
+<meta name="twitter:description" content="编译过程
+预编译将源代码文件和头文件进行预编译
+gcc -E hello.c -o hello.i预编译主要是处理以#开始的预编译指令">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -156,11 +157,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-delete_ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-TheSelf-cultivationOfTheProgrammer" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/04/delete_ubuntu/" class="article-date">
-  	<time datetime="2017-08-04T13:08:43.641Z" itemprop="datePublished">2017-08-04</time>
+      <a href="/2018/04/15/TheSelf-cultivationOfTheProgrammer/" class="article-date">
+  	<time datetime="2018-04-15T14:04:03.369Z" itemprop="datePublished">2018-04-15</time>
 </a>
     </div>
   
@@ -173,7 +174,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      如何从WIN7+ubuntu双系统中卸载ubuntu
+      笔记-程序员的自我修养(第二章)
     </h1>
   
 
@@ -182,7 +183,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序员的自我修养/">程序员的自我修养</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 	</div>
 
         
@@ -193,17 +194,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。<br>先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。<br><a id="more"></a></p>
-<p>怎么判断是不是这种情况呢？就是<strong>每次开机的时候，先进入一个紫色的界面，出现GRUB菜单，然后默认ubuntu选项是在最上方</strong>（当然这种说法并不准确），大概如下图<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg" alt=""></p>
-<h3 id="修复MBR"><a href="#修复MBR" class="headerlink" title="修复MBR"></a>修复MBR</h3><p>接下来第一步就是下载<a href="http://www.sysint.no/mbrfix" target="_blank" rel="external">MbrFix</a>将下载下来的ZIP解压出来，然后命令行进入<strong>MbrFix.exe</strong>所在的文件夹，<br>输入<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MbrFix /drive <span class="number">0</span> fixmbr /yes</span><br></pre></td></tr></table></figure></p>
-<p>64位系统的可以输入<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MbrFix64 /drive <span class="number">0</span> fixmbr /yes</span><br></pre></td></tr></table></figure></p>
-<p>(建议在此操作前，先右键.exe，选择以管理员身份运行)<br>以我的为例<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png" alt=""></p>
-<p>按下Enter键后，如果没有报任何消息，MBR就修复完成了</p>
-<p>接下来重启计算机，你就会神奇地发现直接进入WIN系统了。<br>如果到这一步都很顺利，那么接下来只需要删除ubuntu的分区即可，如果你很不幸地发现和上文所描述的情况不一致，请不要继续接下来的步骤，直接咨询你信任得过的大神！</p>
-<h3 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h3><p>在WIN7中删除分区就很简单了。<br>计算机(右键)→管理→磁盘管理</p>
-<p>点击ubuntu所在的分区(可能2个或者4个，取决于之前的安装方法)，<strong>右键→删除卷</strong>(千万不要把原本WIN7中的分区给删除了)<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png" alt=""></p>
-<p>删除成功后，我们会看到磁盘卷中多出一块绿色的可用空间，这部分的空间是未被系统所使用的<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png" alt=""><br>当然，如果想把这块内存分配器其他盘符，方法也非常简单，请自行搜索。不过在这里，我会把这块空间留下来安装新的ubuntu系统。</p>
-<p>到这里为止，双系统的ubuntu就算卸载完成了。有删必有装，接下来讲解一下怎么安装ubuntu双系统！</p>
+        <h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><ul>
+<li><h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4>将源代码文件和头文件进行预编译<blockquote>
+<p>gcc -E hello.c -o hello.i<br>预编译主要是处理以<b>#</b>开始的预编译指令</p>
+<a id="more"></a></blockquote>
+</li>
+</ul>
+<ol>
+<li>将所有的<b>#define</b> 删除，并且展开所有的宏定义</li>
+<li>处理所有的条件预编译指令</li>
+<li>递归处理<b>#include</b>预编译指令</li>
+<li>删除所有的注释</li>
+<li>添加行号和文件名标示，以便于编译器用于产生调试,警告，错误等信息</li>
+<li>保留所有的#pragma编译器指令</li>
+</ol>
+<ul>
+<li><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4>编译就是将预处理文件进行一系列的词法分析，语法分析，语义分析及优化后生成相应的汇编代码<br><b>gcc这个命令只是后台程序的包装，它会根据不同的参数要求取调用预编译编译程序cc1,汇编器as,链接器ld</b><blockquote>
+<p>gcc -S hello.c -o hello.s</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><h4 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h4><p>汇编就是将汇编代码转变成机器可以执行的指令，每一个汇编语句几乎对应一条机器指令.</p>
+<blockquote>
+<p>as hello.s -o hello.o<br>或者<br>gcc -c hello.s -o hello.o</p>
+</blockquote>
+</li>
+<li><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>链接是一个比较复杂的过程</p>
+</li>
+</ul>
+<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><ul>
+<li><h4 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h4><p>将源代码中的符号提取出来</p>
+</li>
+<li><h4 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h4><p>将上一步采集到的符号进行语法分析，生成语法树</p>
+</li>
+<li><h4 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析　"></a>语义分析　</h4><p>编译器所能分析的时静态语义，所谓静态语义是指在编译期可以确定的语义，与之对应的是动态语义．静态语义通常包括声明和类型的匹配，类型的转换．</p>
+</li>
+<li><h4 id="中间代码优化"><a href="#中间代码优化" class="headerlink" title="中间代码优化"></a>中间代码优化</h4><p>源代码优化器往往将整个语法树转换成中间代码，中间代码是的编译器可以被分为前端和后端．编译器前端负责产生机器无关的中间代码，编译器后端将中间代码转换成目标代码．这样对于一些可以跨平台的编译器而言，它们可以针对不同的平台使用同一个前端和针对不同机器平台的数个后端．</p>
+</li>
+</ul>
+<ul>
+<li><h4 id="目标代码生成和优化"><a href="#目标代码生成和优化" class="headerlink" title="目标代码生成和优化"></a>目标代码生成和优化</h4>编译器后端主要包括代码生成器和目标代码优化器．<br>代码生成器将中间代码转换为目标代码十分依赖于目标机器．目标代码优化器对上述的目标代码进行优化，比如选择合适的寻址方式，使用位移来代替乘法运算，删除多余的指令等．</li>
+</ul>
+<h2 id="链接器"><a href="#链接器" class="headerlink" title="链接器"></a>链接器</h2><ol>
+<li>重新计算各个目标的地址的过程被叫做<b>重定位</b></li>
+<li><b>符号</b>被用来表示一个地址，这个地址可能是一段子程序的起始地址，也可能是一个变量的起始地址</li>
+<li>人们把每个源代码模块独立地编译，然后按照需要组装起来，这个组装模块的过程就是<b>链接</b></li>
+<li>链接过程主要包括了<b>地址和空间分配</b>,<b>符号决议</b>和<b>重定位</b>等步骤．</li>
+</ol>
 
       
     </div>
@@ -213,18 +251,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/08/04/memory_align/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          浅谈C++中的内存对齐
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/04/C++11_Regex/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C++11正则表达式</div>
+    <a href="/2017/08/04/Trace_return_type/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++11追踪返回类型</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -259,7 +288,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="delete_ubuntu" data-title="如何从WIN7+ubuntu双系统中卸载ubuntu" data-url="http://yoursite.com/2017/08/04/delete_ubuntu/"></div>
+	<div class="ds-thread" data-thread-key="TheSelf-cultivationOfTheProgrammer" data-title="笔记-程序员的自我修养(第二章)" data-url="http://yoursite.com/2018/04/15/TheSelf-cultivationOfTheProgrammer/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
