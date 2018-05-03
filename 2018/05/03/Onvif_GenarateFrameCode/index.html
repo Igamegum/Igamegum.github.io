@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>如何从WIN7+ubuntu双系统中卸载ubuntu | iGamegum&#39;s Blog</title>
+  <title>Windows下生成Onvif框架代码 | iGamegum&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
+  <meta name="description" content="1. 下载gsoap到官网下载gsoap,我下载的是2.8.66版本，下载好之后并解压。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何从WIN7+ubuntu双系统中卸载ubuntu">
-<meta property="og:url" content="http://yoursite.com/2017/08/04/delete_ubuntu/index.html">
+<meta property="og:title" content="Windows下生成Onvif框架代码">
+<meta property="og:url" content="http://yoursite.com/2018/05/03/Onvif_GenarateFrameCode/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
-<meta property="og:description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png">
-<meta property="og:updated_time" content="2016-11-28T09:32:58.000Z">
+<meta property="og:description" content="1. 下载gsoap到官网下载gsoap,我下载的是2.8.66版本，下载好之后并解压。">
+<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png">
+<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_conpile.png">
+<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_wsse.png">
+<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_framecode.png">
+<meta property="og:updated_time" content="2018-05-03T05:53:18.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何从WIN7+ubuntu双系统中卸载ubuntu">
-<meta name="twitter:description" content="心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg">
+<meta name="twitter:title" content="Windows下生成Onvif框架代码">
+<meta name="twitter:description" content="1. 下载gsoap到官网下载gsoap,我下载的是2.8.66版本，下载好之后并解压。">
+<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -156,11 +156,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-delete_ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Onvif_GenarateFrameCode" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/04/delete_ubuntu/" class="article-date">
-  	<time datetime="2017-08-04T13:08:43.641Z" itemprop="datePublished">2017-08-04</time>
+      <a href="/2018/05/03/Onvif_GenarateFrameCode/" class="article-date">
+  	<time datetime="2018-05-03T05:52:07.750Z" itemprop="datePublished">2018-05-03</time>
 </a>
     </div>
   
@@ -173,7 +173,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      如何从WIN7+ubuntu双系统中卸载ubuntu
+      Windows下生成Onvif框架代码
     </h1>
   
 
@@ -182,7 +182,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Onvif/">Onvif</a></li></ul>
 	</div>
 
         
@@ -193,17 +193,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>心血来潮感觉电脑上的ubuntu用着有点不爽(迷)，于是打算将原来的ubuntu卸载掉重新安装一个。<br>先说明一下，我电脑上的环境是WIN7+Ubuntu双系统，并且之前安装ubuntu的时候是用ubuntu引导的WIN，这种情况卸载起来比较麻烦，不是直接在WIN上格式化ubuntu的分区就能完事，因为之前安装ubuntu的时候，将GRUB写入到了MBR（Main Boot Record）。<br><a id="more"></a></p>
-<p>怎么判断是不是这种情况呢？就是<strong>每次开机的时候，先进入一个紫色的界面，出现GRUB菜单，然后默认ubuntu选项是在最上方</strong>（当然这种说法并不准确），大概如下图<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/GRUB.jpg" alt=""></p>
-<h3 id="修复MBR"><a href="#修复MBR" class="headerlink" title="修复MBR"></a>修复MBR</h3><p>接下来第一步就是下载<a href="http://www.sysint.no/mbrfix" target="_blank" rel="external">MbrFix</a>将下载下来的ZIP解压出来，然后命令行进入<strong>MbrFix.exe</strong>所在的文件夹，<br>输入<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MbrFix /drive <span class="number">0</span> fixmbr /yes</span><br></pre></td></tr></table></figure></p>
-<p>64位系统的可以输入<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MbrFix64 /drive <span class="number">0</span> fixmbr /yes</span><br></pre></td></tr></table></figure></p>
-<p>(建议在此操作前，先右键.exe，选择以管理员身份运行)<br>以我的为例<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/mbrfix.png" alt=""></p>
-<p>按下Enter键后，如果没有报任何消息，MBR就修复完成了</p>
-<p>接下来重启计算机，你就会神奇地发现直接进入WIN系统了。<br>如果到这一步都很顺利，那么接下来只需要删除ubuntu的分区即可，如果你很不幸地发现和上文所描述的情况不一致，请不要继续接下来的步骤，直接咨询你信任得过的大神！</p>
-<h3 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h3><p>在WIN7中删除分区就很简单了。<br>计算机(右键)→管理→磁盘管理</p>
-<p>点击ubuntu所在的分区(可能2个或者4个，取决于之前的安装方法)，<strong>右键→删除卷</strong>(千万不要把原本WIN7中的分区给删除了)<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA.png" alt=""></p>
-<p>删除成功后，我们会看到磁盘卷中多出一块绿色的可用空间，这部分的空间是未被系统所使用的<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E5%8C%BA%E5%90%8E.png" alt=""><br>当然，如果想把这块内存分配器其他盘符，方法也非常简单，请自行搜索。不过在这里，我会把这块空间留下来安装新的ubuntu系统。</p>
-<p>到这里为止，双系统的ubuntu就算卸载完成了。有删必有装，接下来讲解一下怎么安装ubuntu双系统！</p>
+        <h2 id="1-下载gsoap"><a href="#1-下载gsoap" class="headerlink" title="1. 下载gsoap"></a>1. 下载gsoap</h2><p>到官网下载<a href="https://sourceforge.net/projects/gsoap2/files/" target="_blank" rel="external">gsoap</a>,我下载的是<strong>2.8.66</strong>版本，下载好之后并解压。<br><a id="more"></a></p>
+<h2 id="2-下载WSDL和XSD文件"><a href="#2-下载WSDL和XSD文件" class="headerlink" title="2. 下载WSDL和XSD文件"></a>2. 下载WSDL和XSD文件</h2><ol>
+<li>到官网<a href="https://www.onvif.org/profiles/specifications/" target="_blank" rel="external">下载</a>,其中每个WSDL相当于Onvif的一个模块，不同的模块对应不同的功能，可以按需下载，部分WSDL文件需要依赖XSD文件，如果不是特别熟悉每个文件对应的功能，也可以全部下载，这样起码能保证需要的功能都能支持。下载方法很简单，直接右键链接，选择<em>链接另存为</em>，将文件保存到本地。</li>
+<li>将wsdl文件和xsd文件分别放到不同的文件夹下面,因为所有文件都下载到本地了，所以需要修改wsdl文件中依赖的xsd文件的路径。</li>
+<li>依次编辑每个WSDL文件，搜索文件中的<strong>schemaLocation</strong>关键字，将XSD文件的路径值修改为本地的XSD文件的路径(推荐使用绝对路径)。</li>
+</ol>
+<h2 id="3-生成Onvif文件"><a href="#3-生成Onvif文件" class="headerlink" title="3. 生成Onvif文件"></a>3. 生成Onvif文件</h2><ol>
+<li>打开解压后的gsoap-2.8文件夹，将路径切换至<em>gsoap-2.8\gsoap\bin\win32</em>下，将上一步修改好的wsdl文件整个文件夹拷贝到当前路径下</li>
+<li>将<em>gsoap-2.8\gsoap</em>目录下的<strong>typemap.dat</strong>文件复制到当前文件夹下<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png" alt="catalog"></li>
+<li>在命令行中将路径切换至当前文件夹下，并执行命令<blockquote>
+<p>wsdl2h -t typemap.dat -o onvif.h ./wsdl/accesscontrol.wsdl ./wsdl/accessrules.wsdl ./wsdl/actionengine.wsdl ./wsdl/advancedsecurity.wsdl ./wsdl/analytics.wsdl ./wsdl/deviceio.wsdl ./wsdl/analyticsdevice.wsdl  ./wsdl/credential.wsdl ./wsdl/devicemgmt.wsdl ./wsdl/display.wsdl ./wsdl/doorcontrol.wsdl ./wsdl./event.wsdl ./wsdl/imaging.wsdl ./wsdl/media.wsdl ./wsdl/ptz.wsdl ./wsdl/receiver.wsdl ./wsdl/recording.wsdl ./wsdl/replay.wsdl  ./wsdl/schedule.wsdl ./wsdl/search.wsdl ./wsdl/thermal.wsdl</p>
+</blockquote>
+</li>
+<li>如果上一步执行成功，当前文件夹下会生成一个<strong>onvif.h</strong>文件，编译信息如下<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_conpile.png" alt="onvif_compile"></li>
+</ol>
+<h2 id="4-生成框架代码"><a href="#4-生成框架代码" class="headerlink" title="4. 生成框架代码"></a>4. 生成框架代码</h2><ol>
+<li>编辑onvif.h ,加入代码<strong>#import “wsse.h”</strong>用于鉴权<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_wsse.png" alt="onvif_wsse"></li>
+<li><p>执行命令，生成onvif的框架代码</p>
+<blockquote>
+<p>soapcpp2 -j -2 -x onvif.h -I../../import -I../../</p>
+</blockquote>
+<p>关于soapcpp2 的用法参数的含义，可以先执行<strong>soapcpp2 -h</strong>查看</p>
+</li>
+<li>如果上一步执行成功，将会在当前文件夹生成一系列的.cpp、.h、.nsmap文件<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_framecode.png" alt="onvif_code"></li>
+</ol>
+<h2 id="5-写在最后"><a href="#5-写在最后" class="headerlink" title="5.写在最后"></a>5.写在最后</h2><p>如果一切执行顺利的话，框架代码已经生成完毕，其中文件名类似于<em>“xxxBindingService”</em> 的是服务端的代码，类似于<em>“xxxBindingProxy”</em>的是客户端的代码,而.nsmap文件的内容都一样，实际开发中只需要保留一份就够了</p>
 
       
     </div>
@@ -213,18 +228,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/08/04/Gvim_vumdle/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          WIN下Gvim管理插件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/04/C++11_Regex/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C++11正则表达式</div>
+    <a href="/2018/04/15/TSCP_ch3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">程序员的自我修养(第三章)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -259,7 +265,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="delete_ubuntu" data-title="如何从WIN7+ubuntu双系统中卸载ubuntu" data-url="http://yoursite.com/2017/08/04/delete_ubuntu/"></div>
+	<div class="ds-thread" data-thread-key="Onvif_GenarateFrameCode" data-title="Windows下生成Onvif框架代码" data-url="http://yoursite.com/2018/05/03/Onvif_GenarateFrameCode/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
