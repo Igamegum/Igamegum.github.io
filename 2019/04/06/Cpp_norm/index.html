@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>C++编程规范 | iGamegum&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上了半年的班，越来越发现一些项目的代码不好维护，尤其时接手别人的代码的时候，那叫一个难受，越发觉得需要一套良好的代码规范。抽空阅读了 Google C++ 编程规范，整理一下并做个笔记，以后的编码一定要规范化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++编程规范">
+<meta property="og:url" content="http://yoursite.com/2019/04/06/Cpp_norm/index.html">
+<meta property="og:site_name" content="iGamegum's Blog">
+<meta property="og:description" content="上了半年的班，越来越发现一些项目的代码不好维护，尤其时接手别人的代码的时候，那叫一个难受，越发觉得需要一套良好的代码规范。抽空阅读了 Google C++ 编程规范，整理一下并做个笔记，以后的编码一定要规范化。">
+<meta property="og:updated_time" content="2017-06-15T14:47:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++编程规范">
+<meta name="twitter:description" content="上了半年的班，越来越发现一些项目的代码不好维护，尤其时接手别人的代码的时候，那叫一个难受，越发觉得需要一套良好的代码规范。抽空阅读了 Google C++ 编程规范，整理一下并做个笔记，以后的编码一定要规范化。">
+  
+    <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/igamegum_files/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">iGamegum</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Welcome to iGamegum&#39;s Blog</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Igamegum" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/G/" style="font-size: 10px;">G++</a> <a href="/tags/Onvif/" style="font-size: 10px;">Onvif</a> <a href="/tags/VIM/" style="font-size: 15px;">VIM</a> <a href="/tags/tcpdump/" style="font-size: 10px;">tcpdump</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/程序员的自我修养/" style="font-size: 15px;">程序员的自我修养</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">iGamegum</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/igamegum_files/head.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">iGamegum</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Welcome to iGamegum&#39;s Blog</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Igamegum" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Cpp_norm" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/04/06/Cpp_norm/" class="article-date">
+  	<time datetime="2019-04-06T08:26:57.137Z" itemprop="datePublished">2019-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++编程规范
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上了半年的班，越来越发现一些项目的代码不好维护，尤其时接手别人的代码的时候，那叫一个难受，越发觉得需要一套良好的代码规范。抽空阅读了 <a href="https://github.com/Igamegum/Utils/blob/master/Google_Cpp_Style_guide_CN.pdf" target="_blank" rel="external">Google C++ 编程规范</a>，整理一下并做个笔记，以后的编码一定要规范化。<br><a id="more"></a></p>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ol>
+<li>每个头文件一定要用 <strong>#define</strong> 语句防止被重复包含，命名规则 <em>&lt;Project&gt;<em>&lt;Path&gt;</em>&lt;File&gt;<em>H</em></em></li>
+<li>尽量使用前置声明代替 <em>.h</em> 被包含的次数，因为当 <em>.h</em> 修改后，其他包含它的文件也需要重新编译</li>
+<li>逻辑简单，代码量不超过10行的函数才考虑声明为内联函数，析构函数和递归函数声明为内联的时候应该慎重分析</li>
+<li>复杂的内联函数的定义最好放到<em>inl.h</em> 文件中</li>
+<li>声明函数时，输入参数在前，输出参数在后</li>
+<li>在代码中包含<em>.h</em>的时候，为了避免隐藏的依赖，次序如下 <em>C库</em>，<em>C++库</em>，<em>其他依赖库.h</em>，<em>本项目库.h</em>，</li>
+</ol>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ol>
+<li><strong>不要使用 using namespace std ;</strong> 等语句，这样会造成命名空间污染，有时候会导致奇怪的编译错误</li>
+<li>不要将嵌套类定义为public，除非它们时接口的一部分</li>
+<li>使用命名空间中的非成员函数或者静态成员函数，尽量不要使用全局函数</li>
+<li>局部变量尽可能声明在离第一次使用最近的地方，并且声明的时候就初始化，但如果局部变量是对象，则要避免其多次构造和析构</li>
+<li>禁止使用class类型的全局变量（包括 STL的std::string,std::vector等），因为它们的初始化顺序可能导致构造出现问题</li>
+</ol>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><ol>
+<li>构造函数只进行没有实际意义的初始化，有实际意义的初始化统一放到<strong>Init</strong>函数中执行</li>
+<li>如果一个类定义了成员变量，又没有其他构造函数，请提供一个默认的构造函数</li>
+<li>对于单参数的构造函数，可考虑使用<strong>explicit</strong>关键字 避免意想不到的类型转换</li>
+<li>代码中不需要拷贝对象的时候，应使用<strong>DISALOW_COPY_AND_ASSIGN</strong></li>
+<li>仅当只有数据时，使用<strong>struct</strong>,其他时候使用<strong>class</strong></li>
+<li>尽量使用组合代替继承，继承只使用公有继承</li>
+<li><del>多重继承<del></del></del></li>
+<li><del>接口<del></del></del></li>
+<li>一般不要重载操作符</li>
+<li>将数据成员私有化，并提供相关的get set函数</li>
+<li>类中的声明次序如下，public、protected、private;成员函数在数据成员前面</li>
+<li>编写短小的函数，函数长度尽量不要超过40行</li>
+</ol>
+<h2 id="Google特有风情"><a href="#Google特有风情" class="headerlink" title="Google特有风情"></a>Google特有风情</h2><p>使用智能指针的时候，一般情况下<em>scoped_ptr</em>完全可以胜任，任何情况下都不要使用<em>auto_ptr</em></p>
+<h2 id="其他C-特性"><a href="#其他C-特性" class="headerlink" title="其他C++特性"></a>其他C++特性</h2><ol>
+<li>在函数形参表中，所有引用必须为<strong>const</strong>，如果需要修改形参的值，使用指针</li>
+<li>不实用重载函数来模仿缺省函数</li>
+<li>禁止使用缺省的函数参数</li>
+<li>尽量使用 <em>sizeof(varname)</em>代替<em>sizeof(type)</em></li>
+<li>禁止使用变长数据和alloca</li>
+<li>允许合理使用友元类和友元函数</li>
+<li>不要使用C++异常</li>
+<li>禁止使用 <strong>RTTI</strong></li>
+<li>使用<strong>static_cast&lt;&gt;()</strong>等C++提供的类型转换，禁止使用 C 风格的类型转换</li>
+<li>只有在记录日志的时候使用流，其余使用<strong>printf()</strong>等代替</li>
+<li>将自增和自减前置</li>
+<li>能使用<strong>const</strong>的情况下尽可能加上<strong>const</strong>修饰</li>
+<li>如果程序中要使用不同大小的<em>int</em>，可以使用<em><stdint.h></stdint.h></em>中的类型，因为<em>int</em>在不同编译环境下的精确宽度会不一致</li>
+<li>64位系统下的可移植特性<ul>
+<li>printf()指定的一些类型在32和64位上的可移植性能不是很好</li>
+<li>如果需要一个指针大小的整数，要用<strong>intptr_t</strong>类型</li>
+<li>需要对结构体在系统上的内存对齐留心</li>
+<li>创建64位常量时，用<em>LL</em>或者<em>ULL</em>作为后缀</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>预处理宏尽量使用内联函数、枚举和常量代替</li>
+<li>整数用 <em>0</em>， 实数用 <em>0.0</em> ，字符用 <em>‘\0’</em> ，指针用<em>nullptr</em></li>
+<li>只使用Boost中被认可的库</li>
+</ol>
+<h2 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h2><ol>
+<li>使用描述性明确的变量名</li>
+<li>文件名全部小写，可接下划线(_)或者断线(-)</li>
+<li>所有自定义类型的命名以大写字母开头，并且不加下划线(_)或者断线(-)</li>
+<li>普通变量名全部小写，单词之间接下划线(<em>)或者断线(-)，对于全局变量接加*g</em>*类似的前缀作为区分</li>
+<li>常量的命名在名称前加小写字母<em>k</em></li>
+<li>普通函数的命名大小写混合，存取函数则要求与变量名字匹配</li>
+<li>命名空间的名称全是小写，命名基于项目名称和目录结构</li>
+<li>枚举命名应该全部大写，并且单词之间以下划线相连</li>
+<li>宏命名与与枚举命名一样</li>
+<li>当命名与现有的C++实体相似的对象时，可以参考现有的命名</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li>注释风格要统一</li>
+<li>每个文件应该在开头加上版权，许可版权，作者等信息</li>
+<li>类的定义要附加类的功能和用法的注释</li>
+<li>函数声明处描述函数的功能，定义处描述实现</li>
+<li>变量的用途添加描述</li>
+<li>实现中巧妙、晦涩等地方要加以注释</li>
+<li>留意标点、拼写和语法</li>
+<li>对于临时和短期的方案要加上TODO注释</li>
+</ol>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><ol>
+<li>每一行代码的字符数不超过80</li>
+<li>尽量不使用非<strong>ASCII</strong>字符，使用时必须使用<strong>UTF-8</strong>格式</li>
+<li>只使用空格，每次缩进两个空格</li>
+<li><p>函数的声明和定义遵循如下规则</p>
+<ul>
+<li>返回值总是和函数名在同一行</li>
+<li>左圆括号和函数名在同一行</li>
+<li>左圆括号和函数名之间没有空格</li>
+<li>圆括号与参数间没有空格</li>
+<li>右园括号和左大括号之间总是有一个空格</li>
+<li>左大括号总在最后一个参数同一行的末尾处</li>
+<li>右大括号总是单独位于函数最后一行</li>
+<li>函数声明和实现处的所有形参的名称必须保持一致</li>
+<li>所有形参应尽可能对齐</li>
+<li>缺省缩进为两个空格</li>
+<li>独立封装的参数保持4个空格的缩进</li>
+</ul>
+</li>
+<li><p>函数的调用尽量放在同一行</p>
+</li>
+<li>条件语句风格要统一，关键字else另起一行</li>
+<li>switch语句使用大括号分块，空循环体使用{}或者continue</li>
+<li>句点(.)和箭头(→ )前后不要有空格</li>
+<li>bool表达式断行要统一</li>
+<li>函数返回值的表达式不要使用圆括号</li>
+<li>变量及数组的初始化风格要统一</li>
+<li>预处理指令不要缩进，从行首开始</li>
+<li>类的缩进格式每次1个空格</li>
+<li>构造函数初始化列表放在同一行或者按照4个空格缩进</li>
+<li>命名空间内容不缩进</li>
+<li>水平留白要恰当</li>
+<li>垂直留白要尽可能少</li>
+</ol>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>大概就是以上的内容，上面并没有提到文件目录的存放结构以及分离式编译的使用，然而工程稍大之后，这些都是非常必要的，不过这些应该都属于工程组织上的内容了，所以还是好好学习怎么写 <em>cmake</em> 吧，不能贪图方便，一条 <em>g++</em> 命令就写到底了。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/04/06/delete_ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          如何从WIN7+ubuntu双系统中卸载ubuntu
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/06/C++11_Regex/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++11正则表达式</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Cpp_norm" data-title="C++编程规范" data-url="http://yoursite.com/2019/04/06/Cpp_norm/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 iGamegum
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
