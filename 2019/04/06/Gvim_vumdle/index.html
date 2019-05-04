@@ -12,17 +12,17 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/06/Gvim_vumdle/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
 <meta property="og:description" content="Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_04.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_06.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_05.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_02.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_10.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_01.png">
-<meta property="og:updated_time" content="2016-07-12T15:40:52.000Z">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_04.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_06.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_05.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_02.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_10.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_01.png">
+<meta property="og:updated_time" content="2019-05-04T05:03:11.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WIN下Gvim管理插件">
 <meta name="twitter:description" content="Vim的插件手动安装是比较繁琐的，这里介绍一个专门管理Vim插件的插件——Vundle。使用Vundle可以很方便的实现插件的安装和删除，省去了大量手工操作的麻烦！">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_04.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_04.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -201,30 +201,30 @@
 <blockquote>
 <p>C:\Program Files (x86)\Git\bin</p>
 </blockquote>
-<p>配置好之后，打开命令行，输入 git –version，如果显示如下图，说明第一步成功<br><br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_04.png" alt=""></p>
-<h2 id="安装Vundle"><a href="#安装Vundle" class="headerlink" title="安装Vundle"></a>安装Vundle</h2><p>打开Vim安装所在的目录,在vimfiles目录下，新建目录Bundle,并且打开命令行，切换到该目录<br><br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_06.png" alt=""></p>
+<p>配置好之后，打开命令行，输入 git –version，如果显示如下图，说明第一步成功<br><br><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_04.png" alt=""></p>
+<h2 id="安装Vundle"><a href="#安装Vundle" class="headerlink" title="安装Vundle"></a>安装Vundle</h2><p>打开Vim安装所在的目录,在vimfiles目录下，新建目录Bundle,并且打开命令行，切换到该目录<br><br><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_06.png" alt=""></p>
 <p>输入</p>
 <blockquote>
 <p>git clone <a href="https://github.com/gmarik/vundle" target="_blank" rel="external">https://github.com/gmarik/vundle</a></p>
 </blockquote>
 <p>等待下载</p>
-<p><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_05.png" alt=""></p>
+<p><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_05.png" alt=""></p>
 <p>下载成功后，需要配置_vimrc</p>
 <p>在_vimrc中加入以下代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Vundle的路径</span><br><span class="line">set rtp+=<span class="variable">$VIM</span>/vimfiles/bundle/vundle/</span><br><span class="line">"</span>插件的安装路径</span><br><span class="line">call vundle<span class="comment">#begin('$VIM/vimfiles/Bundle/') </span></span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span>  </span><br><span class="line">call vundle<span class="comment">#end()</span></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
 <p>以后添加插的代码就直接写在<br><strong>call vundle#begin()</strong> 和 <strong>callvundle#end()</strong> 之间</p>
-<p>重新打开Vim，在Normal模式下输入 <strong>:BundleList</strong>,即可查看当前_vimrc文件中指定的插件<br><br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_02.png" alt=""><br><br>再在Normal模式下输入<strong>:BundleInstall</strong>，后台便会自动下载并安装插件栏里还未安装的插件,当状态栏里显示Done！的时候，表明所有插件都安装完毕。<br>其实到这里为止，你便可以根据自己的需要，自由地安装插件了！</p>
+<p>重新打开Vim，在Normal模式下输入 <strong>:BundleList</strong>,即可查看当前_vimrc文件中指定的插件<br><br><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_02.png" alt=""><br><br>再在Normal模式下输入<strong>:BundleInstall</strong>，后台便会自动下载并安装插件栏里还未安装的插件,当状态栏里显示Done！的时候，表明所有插件都安装完毕。<br>其实到这里为止，你便可以根据自己的需要，自由地安装插件了！</p>
 <p>下面再讲解一下vim-airLine插件的安装</p>
 <h2 id="安装-vim-airLine"><a href="#安装-vim-airLine" class="headerlink" title="安装 vim-airLine"></a>安装 vim-airLine</h2><p>airLine简单的说就是vim状态栏的强化版，当然，还添加了很多其他的功能</p>
 <p>我们先在_vimrc中vundle的插件配置中添加一句</p>
 <blockquote>
 <p>Bundle ‘bling/vim-airline’</p>
 </blockquote>
-<p><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_10.png" alt=""></p>
+<p><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_10.png" alt=""></p>
 <p>然后再添加以下代码作配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"打开tabline功能,方便查看Buffer和切换，这个功能比较不错"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#tabline#enabled = 1</span></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#tabline#buffer_nr_show = 1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">" 关闭状态显示空白符号计数"</span></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#whitespace#enabled = 0</span></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#whitespace#symbol = '!'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">" 设置consolas字体"</span></span><br><span class="line"><span class="built_in">set</span> guifont=Consolas\ <span class="keyword">for</span>\ Powerline\ FixedD:h11</span><br><span class="line"></span><br><span class="line"><span class="string">"设置状态栏符号显示，下面编码用双引号"</span></span><br><span class="line"><span class="built_in">let</span> g:Powerline_symbols=<span class="string">"fancy"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_symbols = &#123;&#125;</span><br><span class="line"><span class="string">"let g:airline_left_sep = "</span>\u2b80<span class="string">" </span><br><span class="line">let g:airline_left_sep = "</span>\u25b6<span class="string">" </span><br><span class="line">let g:airline_left_alt_sep = "</span>\u2b81<span class="string">"</span><br><span class="line">"</span><span class="built_in">let</span> g:airline_right_sep = <span class="string">"\u2b82"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_right_sep = <span class="string">"\u25c0"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_right_alt_sep = <span class="string">"\u2b83"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_symbols.branch = <span class="string">"\u2b60"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_symbols.readonly = <span class="string">"\u2b64"</span></span><br><span class="line"><span class="built_in">let</span> g:airline_symbols.linenr = <span class="string">"\u2b61"</span></span><br><span class="line"></span><br><span class="line"><span class="string">"设置顶部tabline栏符号显示"</span></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#tabline#left_sep = "\u25b6"</span></span><br><span class="line"><span class="built_in">let</span> g:airline<span class="comment">#extensions#tabline#left_alt_sep = "\u2b81"</span></span><br></pre></td></tr></table></figure>
 <p>保存后打开vim，输入<strong>:BundleInstall</strong>完成插件的安装。<br>重新打开VIM,效果如图</p>
-<p><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim-bundle_01.png" alt=""></p>
+<p><img src="../../../../igamegum_files/pic/Gvim_vumdle/Gvim-bundle_01.png" alt=""></p>
 <h2 id="删除插件"><a href="#删除插件" class="headerlink" title="删除插件"></a>删除插件</h2><p>插件的删除也方便，直接将_vimrc中的插件配置语句注释掉,比如我要删除刚才装的airline,只需要注释掉 <strong>Bundle ‘bling/vim-airline’</strong>。<br>重新打开vim,输入<strong>BundleClean</strong>,提示之后输入’Y’确定，便能一键删除插件。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>安装git。<br>这是必不可少的一步，后续vim插件的安装基本都是通过git作下载的。<br></li>

@@ -12,16 +12,16 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/06/setup_ubuntu/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
 <meta property="og:description" content="下午折腾了两个小时，终于把这坑给补上了！虽然动手前看了好多篇教程，但在实际安装的时候还是遇到了一点问题，所幸没费多大劲就解决过去了，果然还是实践出真知！">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/choose_iso.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/write.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/writeIn.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/%E5%AE%89%E8%A3%85%E7%B1%BB%E5%9E%8B.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/BCDModify.png">
-<meta property="og:updated_time" content="2017-06-15T14:41:52.000Z">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu/choose_iso.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu//write.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu//writeIn.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu//安装类型.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu/BCDModify.png">
+<meta property="og:updated_time" content="2019-05-04T04:37:58.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WIN7下安装ubuntu双系统">
 <meta name="twitter:description" content="下午折腾了两个小时，终于把这坑给补上了！虽然动手前看了好多篇教程，但在实际安装的时候还是遇到了一点问题，所幸没费多大劲就解决过去了，果然还是实践出真知！">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/choose_iso.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../igamegum_files/pic//setup_ubuntu/choose_iso.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -206,10 +206,10 @@
 <p>UltraISO的下载可以<a href="http://www.ezbsystems.com/ultraiso/download.htm" target="_blank" rel="external">戳这</a>，在里面选择简体中文(Simp.Chinese)版下载并安装</p>
 <p>预备一个2G以上的U盘，请提前备份好U盘中的数据，制作启动盘的时候会自动格式化U盘</p>
 <p>Ubuntu的镜像文件可以直接到<a href="http://cn.ubuntu.com/download/" target="_blank" rel="external">中文官网</a>下载,我用的是<strong>Ubuntu16.04LTS_64位</strong>(貌似直接用chrome下载会很慢，我是直接把下载链接贴到迅雷下载)</p>
-<p>一切准备就绪之后，打开UltraISO(选择继续试用),<br>点击打开文件图标，选择下载好的ISO文件，确定<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/choose_iso.png" alt=""><br>然后点击启动，写入硬盘映像<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/write.png" alt=""></p>
-<p>然后按照下图操作<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/writeIn.png" alt=""></p>
+<p>一切准备就绪之后，打开UltraISO(选择继续试用),<br>点击打开文件图标，选择下载好的ISO文件，确定<br><img src="../../../../igamegum_files/pic//setup_ubuntu/choose_iso.png" alt=""><br>然后点击启动，写入硬盘映像<br><img src="../../../../igamegum_files/pic//setup_ubuntu//write.png" alt=""></p>
+<p>然后按照下图操作<br><img src="../../../../igamegum_files/pic//setup_ubuntu//writeIn.png" alt=""></p>
 <p>大概5分钟左右，便可制作完毕。<br>如果这一步失败也没有关系，其实UltraISO只是制作U盘启动的一种工具，你也可以尝试其他的工具！</p>
-<h3 id="安装ubuntu并分区"><a href="#安装ubuntu并分区" class="headerlink" title="安装ubuntu并分区"></a>安装ubuntu并分区</h3><p>接下来重启电脑，并且进入BIOS，将U盘设置为第一启动项(这一步每种电脑都不一样，具体方法请自行搜索)。<br>成功之后，电脑开机的时候将进入一个grep菜单，我们选择<strong>Install Ubuntu</strong>。<br>稍等之后，便会进入Ubuntu Desktop ，并且弹出安装界面。<br>第一步是选择语言，这里我选择了简体中文。<br>第二步是安装前的一些更新配置，这里怎么选都无所谓。<br>第三步是安装类型，这一步很重要，我们选择<strong>其他选项</strong>，因为这样子我们可以手动为ubuntu分区<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/%E5%AE%89%E8%A3%85%E7%B1%BB%E5%9E%8B.png" alt=""></p>
+<h3 id="安装ubuntu并分区"><a href="#安装ubuntu并分区" class="headerlink" title="安装ubuntu并分区"></a>安装ubuntu并分区</h3><p>接下来重启电脑，并且进入BIOS，将U盘设置为第一启动项(这一步每种电脑都不一样，具体方法请自行搜索)。<br>成功之后，电脑开机的时候将进入一个grep菜单，我们选择<strong>Install Ubuntu</strong>。<br>稍等之后，便会进入Ubuntu Desktop ，并且弹出安装界面。<br>第一步是选择语言，这里我选择了简体中文。<br>第二步是安装前的一些更新配置，这里怎么选都无所谓。<br>第三步是安装类型，这一步很重要，我们选择<strong>其他选项</strong>，因为这样子我们可以手动为ubuntu分区<br><img src="../../../../igamegum_files/pic//setup_ubuntu//安装类型.png" alt=""></p>
 <p>至于为什么要手动配置分区，每个分区的作用与含义，选择哪种方案配置。这里我也不是很清楚，有兴趣的可以看看<a href="http://blog.csdn.net/arcsinsin/article/details/17143163" target="_blank" rel="external">这里</a><br>我选择的方案是配置4个分区,具体如下</p>
 <table>
 <thead>
@@ -254,7 +254,7 @@
 </table>
 <p>这里有个操作顺序很重要，一定要先分出<strong>/</strong>分区，不然有可能像我一样，分出两个分区之后，就会出现空闲空间不可使用的情况。<br>我当时是参考<a href="http://tieba.baidu.com/p/2888027993" target="_blank" rel="external">这里</a>解决的！<br>上述操作都完成之后，这里重要的一点，下方<strong>安装启动引导器的设备</strong>的下拉框中，要选择与<strong>/boot</strong> 分区同一个盘符。<br>最后点击现在安装。ubuntu的安装还是很快的，安装成功之后，重启电脑。(记得把U盘拔出电脑)</p>
 <h3 id="添加ubuntu启动引导"><a href="#添加ubuntu启动引导" class="headerlink" title="添加ubuntu启动引导"></a>添加ubuntu启动引导</h3><p>如无意外的话，这时候是直接进入WIN系统的，并没有选择进入ubuntu的选择项。莫慌，我们接下来就是要添加ubuntu的启动项</p>
-<p>请自行下载<strong>EasyBCD</strong>并安装好<br>打开软件，点击<strong>添加新条目→Linux/BSD→驱动器选择之前”/boot”的分区→点击添加条目</strong><br><img src="http://7xvs12.com1.z0.glb.clouddn.com/BCDModify.png" alt=""></p>
+<p>请自行下载<strong>EasyBCD</strong>并安装好<br>打开软件，点击<strong>添加新条目→Linux/BSD→驱动器选择之前”/boot”的分区→点击添加条目</strong><br><img src="../../../../igamegum_files/pic//setup_ubuntu/BCDModify.png" alt=""></p>
 <p>接下来重启电脑，便可以看到多了一条进入ubuntu的选项，到这里为止，我们的工作就算大功告成了！</p>
 
       

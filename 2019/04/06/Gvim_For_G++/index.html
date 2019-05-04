@@ -12,14 +12,14 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/06/Gvim_For_G++/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
 <meta property="og:description" content="从大三开始就入坑VIM了，作为一名没有任何觉悟的菜鸟，一直都是在Windows下进行开发，所以一直以来用的都是Gvim。G++的配置很早之前就已经实现了，因为感觉最近电脑的硬盘有随时”爆炸”的可能，特意markdown一下自己的配置，起个备忘的作用.">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B01.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B02.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B03.png">
-<meta property="og:updated_time" content="2016-06-30T12:29:06.000Z">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++01.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++02.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++03.png">
+<meta property="og:updated_time" content="2019-05-04T05:10:41.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WIN 下Gvim 配置 G++ 编译器">
 <meta name="twitter:description" content="从大三开始就入坑VIM了，作为一名没有任何觉悟的菜鸟，一直都是在Windows下进行开发，所以一直以来用的都是Gvim。G++的配置很早之前就已经实现了，因为感觉最近电脑的硬盘有随时”爆炸”的可能，特意markdown一下自己的配置，起个备忘的作用.">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B01.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++01.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -195,9 +195,9 @@
         <p>从大三开始就入坑VIM了，作为一名没有任何觉悟的菜鸟，一直都是在Windows下进行开发，所以一直以来用的都是Gvim。G++的配置很早之前就已经实现了，因为感觉最近电脑的硬盘有随时”爆炸”的可能，特意markdown一下自己的配置，起个备忘的作用.<br> <a id="more"></a></p>
 <h2 id="配置编译器"><a href="#配置编译器" class="headerlink" title="配置编译器"></a>配置编译器</h2><p>简单的说就是我们要在WIN上配置好一个编译器，能够在命令行利用它进行cpp或者c文件的编译。<br>如果系统里面已经相关的IDE了，可以直接将相关IDE的编译器路径配置到环境变量中，比如vistual studio的CL编译器，或者下个自带编译器的CodeBlocks，里面是内置g++的。</p>
 <p>因为早前打算学习C++11，需要用到版本比较高的编译器，所以我就直接下载了最新的 <a href="http://www.mingw.org/" target="_blank" rel="external">MinGW</a>,有点英文基础的很容易就能找到下载链接，或者直接 <a href="https://sourceforge.net/projects/mingw/files/latest/download?source=files" target="_blank" rel="external">戳这</a>,安装什么的就不用多说了。</p>
-<p>安装好了之后，里面还是没有编译器的，我们打开 MinGW Installation Manager,左上角选中Basic Setup,在右边的子窗口选中mingw32-gcc-g++,这个就是我们需要的编译器，然后右键,选中,Mark For Installation ,注意，我这边是已经安装好的，所以图里这一项是不可选的 <img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B01.png" alt="">.</p>
-<p>然后点击左上方的Installation,再点击Apply Changes，接下来就是等待自动下载的事情了!<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B02.png" alt=""></p>
-<p>如果到这里都没有问题，下载完成后，在MinGW安装目录的bin 文件夹下，应该会发现多了很多.exe和.dll 文件，你也能轻易的找到轻易地找到g++.exe这个程序。接下来把g++所在路径配置到环境变量中，我这边是 C:\MinGW\bin,配置完成后，打开命令行，输入g++ -v，如果显示如下图，则表示配置成功！<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/Gvim_For_G%2B%2B03.png" alt=""></p>
+<p>安装好了之后，里面还是没有编译器的，我们打开 MinGW Installation Manager,左上角选中Basic Setup,在右边的子窗口选中mingw32-gcc-g++,这个就是我们需要的编译器，然后右键,选中,Mark For Installation ,注意，我这边是已经安装好的，所以图里这一项是不可选的 <img src="../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++01.png" alt="">.</p>
+<p>然后点击左上方的Installation,再点击Apply Changes，接下来就是等待自动下载的事情了!<br><img src="../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++02.png" alt=""></p>
+<p>如果到这里都没有问题，下载完成后，在MinGW安装目录的bin 文件夹下，应该会发现多了很多.exe和.dll 文件，你也能轻易的找到轻易地找到g++.exe这个程序。接下来把g++所在路径配置到环境变量中，我这边是 C:\MinGW\bin,配置完成后，打开命令行，输入g++ -v，如果显示如下图，则表示配置成功！<br><img src="../../../../igamegum_files/pic/Gvim_For_G++/Gvim_For_G++03.png" alt=""></p>
 <h2 id="配置-vimrc"><a href="#配置-vimrc" class="headerlink" title="配置_vimrc"></a>配置_vimrc</h2><p>接下来就是对_vimrc 的配置，我们分别写一个编译函数和一个运行函数，并设置相应的快捷键，使得能够实现一键编译和一键运行。</p>
 <p>对于_vimrc的配置语法，可以 <a href="http://blog.chinaunix.net/uid-26707720-id-3329205.html" target="_blank" rel="external">戳这</a>,个人感觉跟shell脚本差不多，毕竟Gvim是从Linux下的Vim而来的。</p>
 <p>先不废话，对于G++的配置，我的代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"定义CompileRun函数，用来编译代码 </span><br><span class="line">func CompileRun()  </span><br><span class="line">exec "</span>w<span class="string">"  </span><br><span class="line">  </span><br><span class="line">if &amp;filetype == 'c'  </span><br><span class="line">exec "</span>!gcc % -g -o %&lt;.exe<span class="string">"  </span><br><span class="line">  </span><br><span class="line">elseif &amp;filetype == 'cpp'  </span><br><span class="line">exec "</span>!g++ % -g -o %&lt;.exe<span class="string">"  </span><br><span class="line">endif  </span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line">"</span>定义Run函数  </span><br><span class="line">func Run()  </span><br><span class="line"><span class="keyword">if</span> &amp;filetype == <span class="string">'c'</span> || &amp;filetype == <span class="string">'cpp'</span>  </span><br><span class="line"><span class="built_in">exec</span> <span class="string">"!%&lt;.exe"</span>  </span><br><span class="line">endif  </span><br><span class="line">endfunc  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">map &lt;F9&gt; :call CompileRun()&lt;CR&gt;  </span><br><span class="line">map &lt;F10&gt; :call Run()&lt;CR&gt;</span><br></pre></td></tr></table></figure></p>

@@ -12,15 +12,15 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/06/Onvif_GenarateFrameCode/index.html">
 <meta property="og:site_name" content="iGamegum's Blog">
 <meta property="og:description" content="1. 下载gsoap到官网下载gsoap,我下载的是2.8.66版本，下载好之后并解压。">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_conpile.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_wsse.png">
-<meta property="og:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_framecode.png">
-<meta property="og:updated_time" content="2018-05-03T05:53:20.000Z">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_catalog_init.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_conpile.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_wsse.png">
+<meta property="og:image" content="http://yoursite.com/../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_framecode.png">
+<meta property="og:updated_time" content="2019-05-04T04:56:43.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下生成Onvif框架代码">
 <meta name="twitter:description" content="1. 下载gsoap到官网下载gsoap,我下载的是2.8.66版本，下载好之后并解压。">
-<meta name="twitter:image" content="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_catalog_init.png">
   
     <link rel="alternative" href="/atom.xml" title="iGamegum&#39;s Blog" type="application/atom+xml">
   
@@ -201,22 +201,22 @@
 </ol>
 <h2 id="3-生成Onvif文件"><a href="#3-生成Onvif文件" class="headerlink" title="3. 生成Onvif文件"></a>3. 生成Onvif文件</h2><ol>
 <li>打开解压后的gsoap-2.8文件夹，将路径切换至<em>gsoap-2.8\gsoap\bin\win32</em>下，将上一步修改好的wsdl文件整个文件夹拷贝到当前路径下</li>
-<li>将<em>gsoap-2.8\gsoap</em>目录下的<strong>typemap.dat</strong>文件复制到当前文件夹下<br><img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_catalog_init.png" alt="catalog"></li>
+<li>将<em>gsoap-2.8\gsoap</em>目录下的<strong>typemap.dat</strong>文件复制到当前文件夹下<br><img src="../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_catalog_init.png" alt="catalog"></li>
 <li>在命令行中将路径切换至当前文件夹下，并执行命令<blockquote>
 <p>wsdl2h -t typemap.dat -o onvif.h ./wsdl/accesscontrol.wsdl ./wsdl/accessrules.wsdl ./wsdl/actionengine.wsdl ./wsdl/advancedsecurity.wsdl ./wsdl/analytics.wsdl ./wsdl/deviceio.wsdl ./wsdl/analyticsdevice.wsdl  ./wsdl/credential.wsdl ./wsdl/devicemgmt.wsdl ./wsdl/display.wsdl ./wsdl/doorcontrol.wsdl ./wsdl./event.wsdl ./wsdl/imaging.wsdl ./wsdl/media.wsdl ./wsdl/ptz.wsdl ./wsdl/receiver.wsdl ./wsdl/recording.wsdl ./wsdl/replay.wsdl  ./wsdl/schedule.wsdl ./wsdl/search.wsdl ./wsdl/thermal.wsdl</p>
 </blockquote>
 </li>
-<li>如果上一步执行成功，当前文件夹下会生成一个<strong>onvif.h</strong>文件，编译信息如下<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_conpile.png" alt="onvif_compile"></li>
+<li>如果上一步执行成功，当前文件夹下会生成一个<strong>onvif.h</strong>文件，编译信息如下<br> <img src="../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_conpile.png" alt="onvif_compile"></li>
 </ol>
 <h2 id="4-生成框架代码"><a href="#4-生成框架代码" class="headerlink" title="4. 生成框架代码"></a>4. 生成框架代码</h2><ol>
-<li>编辑onvif.h ,加入代码<strong>#import “wsse.h”</strong>用于鉴权<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_wsse.png" alt="onvif_wsse"></li>
+<li>编辑onvif.h ,加入代码<strong>#import “wsse.h”</strong>用于鉴权<br> <img src="../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_wsse.png" alt="onvif_wsse"></li>
 <li><p>执行命令，生成onvif的框架代码</p>
 <blockquote>
 <p>soapcpp2 -j -2 -x onvif.h -I../../import -I../../</p>
 </blockquote>
 <p>关于soapcpp2 的用法参数的含义，可以先执行<strong>soapcpp2 -h</strong>查看</p>
 </li>
-<li>如果上一步执行成功，将会在当前文件夹生成一系列的.cpp、.h、.nsmap文件<br> <img src="http://7xvs12.com1.z0.glb.clouddn.com/onvif_framecode.png" alt="onvif_code"></li>
+<li>如果上一步执行成功，将会在当前文件夹生成一系列的.cpp、.h、.nsmap文件<br> <img src="../../../../igamegum_files/pic/Onvif_GenarateFrameCode/onvif_framecode.png" alt="onvif_code"></li>
 </ol>
 <h2 id="5-写在最后"><a href="#5-写在最后" class="headerlink" title="5.写在最后"></a>5.写在最后</h2><p>如果一切执行顺利的话，框架代码已经生成完毕，其中文件名类似于<em>“xxxBindingService”</em> 的是服务端的代码，类似于<em>“xxxBindingProxy”</em>的是客户端的代码,而.nsmap文件的内容都一样，实际开发中只需要保留一份就够了</p>
 
